@@ -5266,6 +5266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
+    - target: {fileID: 3010911283047889674, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4690204209130733421, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5310,7 +5314,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8308739128786262678, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
 --- !u!4 &7123633912149601158 stripped
 Transform:

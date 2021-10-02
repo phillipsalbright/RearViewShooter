@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public GameObject impactEffect;
 
     private float nextTimeToFire = 0f;
+    public AudioSource gunShotSound;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +29,8 @@ public class Gun : MonoBehaviour
     {
         muzzleFlash.Play();
         RaycastHit hit;
+        gunShotSound.Play();
+        //FindObjectOfType<AudioManager>().Play("Gunshot sound");
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             EnemyTarget target = hit.transform.GetComponent<EnemyTarget>();
