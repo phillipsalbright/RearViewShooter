@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     /** Value for speed to apply to the player */
     public float moveSpeed;
+    /** Move speed variable that allows for changes to move speed based on local conditions */
+    private float moveSpeedLocal;
     /** Multiplier to overcome drag for player speed */
     public float movementMultiplier;
     /** Multiplier to reduce movement speed in air */
@@ -117,15 +119,22 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        if (isGrounded && !OnSlope())
+        if (moveDirection.z < 0)
         {
-            player.AddForce(movementMultiplier * moveSpeed * moveDirection.normalized, ForceMode.Acceleration);
-        } else if (isGrounded)
-        {
-            player.AddForce(moveSpeed * movementMultiplier * slopeMoveDirection.normalized, ForceMode.Acceleration);
+            moveSpeedLocal = .6f * moveSpeed;
         } else
         {
-            player.AddForce(airMultiplier * movementMultiplier * moveSpeed * moveDirection.normalized, ForceMode.Acceleration);
+            moveSpeedLocal = moveSpeed;
+        }
+        if (isGrounded && !OnSlope())
+        {
+            player.AddForce(movementMultiplier * moveSpeedLocal * moveDirection.normalized, ForceMode.Acceleration);
+        } else if (isGrounded)
+        {
+            player.AddForce(moveSpeedLocal * movementMultiplier * slopeMoveDirection.normalized, ForceMode.Acceleration);
+        } else
+        {
+            player.AddForce(airMultiplier * movementMultiplier * moveSpeedLocal * moveDirection.normalized, ForceMode.Acceleration);
         }
         
     }

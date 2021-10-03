@@ -6,6 +6,7 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float impactForce = 10f;
     public float timeBetweenShots = .1f;
+    public int ammoCount = 20;
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
@@ -27,23 +28,28 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        muzzleFlash.Play();
-        RaycastHit hit;
-        gunShotSound.Play();
-        //FindObjectOfType<AudioManager>().Play("Gunshot sound");
-        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (ammoCount > 0)
         {
-            EnemyTarget target = hit.transform.GetComponent<EnemyTarget>();
-            if (target != null)
+            ammoCount--;
+            muzzleFlash.Play();
+            RaycastHit hit;
+            gunShotSound.Play();
+            //FindObjectOfType<AudioManager>().Play("Gunshot sound");
+            //Change "this" to "fpsCam" for testing.
+            if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, range))
             {
-                target.TakeDamage(damage);
+                EnemyTarget target = hit.transform.GetComponent<EnemyTarget>();
+                if (target != null)
+                {
+                    target.TakeDamage(damage);
+                }
+                if (hit.rigidbody != null)
+                {
+                    hit.rigidbody.AddForce(-hit.normal * impactForce);
+                }
+                GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impact, 2f);
             }
-            if (hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
-            GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impact, 2f);
         }
     }
 }
