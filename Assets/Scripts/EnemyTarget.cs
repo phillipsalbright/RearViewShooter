@@ -7,14 +7,5 @@ public class EnemyTarget : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Destroy(this.gameObject);
     }
 }

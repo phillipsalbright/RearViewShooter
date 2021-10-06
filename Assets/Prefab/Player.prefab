@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1341684306653028415}
   - component: {fileID: 1341684306653028414}
   - component: {fileID: 1341684306653028409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,9 +108,10 @@ GameObject:
   - component: {fileID: 1341684306945711390}
   - component: {fileID: 1341684306945711385}
   - component: {fileID: 5082612857937729843}
-  m_Layer: 0
+  - component: {fileID: 3005947591134991759}
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +195,19 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   multiplier: 1
   orientation: {fileID: 2697828512304354793}
+--- !u!114 &3005947591134991759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341684306945711384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208953cd9b4b280458b4222eb4d034e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &4652738898199089178
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2697828512304354793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7258586066754999011}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 796891147133983010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
