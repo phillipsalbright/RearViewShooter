@@ -22,6 +22,7 @@ public class PlayerLook : MonoBehaviour
     private float yRotation;
 
     /** Orientation of the player in the scene, gameobject attached to player keeping track of this */
+    /** If player hitbox is not symmetrical on x/z plane, would have to change to rotate whole player */
     [SerializeField] private Transform orientation;
 
     void Start()
