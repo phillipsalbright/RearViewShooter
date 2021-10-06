@@ -5,7 +5,7 @@ public class Gun : MonoBehaviour
     public float damage = 10f;
     public float range = 100f;
     public float impactForce = 10f;
-    public float timeBetweenShots = .1f;
+    public float fireRate = 3f;
     public int ammoCount = 20;
 
     public Camera fpsCam;
@@ -21,7 +21,7 @@ public class Gun : MonoBehaviour
         /** Change to just "GetButton" for automatic */
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
-            nextTimeToFire = Time.time + timeBetweenShots;
+            nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
     }
