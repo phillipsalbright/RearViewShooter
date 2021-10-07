@@ -14,9 +14,16 @@ public class ZombieEnemy : MonoBehaviour
     public enum AIState { idle, chasing, attacking, dead };
     public AIState aiState;
 
+    /** Animator for 3d model */
     public Animator anim;
+    /** EnemyTarget Script attached to this enemy to calculate health */
     public EnemyTarget healthCounter;
+    /** 3d model for this zombie, used for despawning */
     public GameObject model;
+
+    /** Hitboxes for the zombie that we will manipulate the transform of to match animations */
+    public GameObject headHitBox;
+    public GameObject bodyHitBox;
     
     // Start is called before the first frame update
     void Start()
@@ -60,6 +67,9 @@ public class ZombieEnemy : MonoBehaviour
                         anim.SetBool("Chasing", true);
                     }
                     nm.SetDestination(this.transform.position);
+                    headHitBox.transform.localPosition = new Vector3(0, 1.818f, .029f);
+                    bodyHitBox.transform.localPosition = new Vector3(0, 1.28f, -.049f);
+                    bodyHitBox.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     break;
                 case AIState.chasing:
                     distance = Vector3.Distance(target.position, this.transform.position);
@@ -74,6 +84,9 @@ public class ZombieEnemy : MonoBehaviour
                         anim.SetBool("Attacking", true);
                     }
                     nm.SetDestination(target.position);
+                    headHitBox.transform.localPosition = new Vector3(0, 1.696f, .366f);
+                    bodyHitBox.transform.localPosition = new Vector3(0, 1.169f, .228f);
+                    bodyHitBox.transform.localRotation = new Quaternion(-10.17f, 0, 0, 1);
                     break;
                 case AIState.attacking:
                     nm.SetDestination(this.transform.position);
@@ -90,6 +103,9 @@ public class ZombieEnemy : MonoBehaviour
                         r.AddForce(-r.normal * hitForce);
                         */
                     }
+                    headHitBox.transform.localPosition = new Vector3(0, 1.818f, .029f);
+                    bodyHitBox.transform.localPosition = new Vector3(0, 1.28f, -.049f);
+                    bodyHitBox.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     break;
                 case AIState.dead:
                     break;
