@@ -22,11 +22,15 @@ public class DeathScreen : MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(currentLevel);
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
