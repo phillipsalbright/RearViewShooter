@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 50f;
+    public DeathScreen deathScreen;
     
     public void TakeDamage(float damage)
     {
@@ -16,6 +17,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Death()
     {
-        SceneManager.LoadScene(0);
+        deathScreen.Death();
     }
 }
