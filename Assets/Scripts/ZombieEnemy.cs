@@ -89,6 +89,7 @@ public class ZombieEnemy : MonoBehaviour
                     bodyHitBox.transform.localRotation = new Quaternion(-10.17f, 0, 0, 1);
                     break;
                 case AIState.attacking:
+                    //nm.SetDestination(target.position);
                     nm.SetDestination(this.transform.position);
                     distance = Vector3.Distance(target.position, this.transform.position);
                     if (distance > attackRange)
