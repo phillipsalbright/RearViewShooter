@@ -15,8 +15,8 @@ TagManager:
   - Player
   - Weapon
   - InvisEnemy
-  - 
-  - 
+  - HealthPickup
+  - AmmoPickup
   - 
   - 
   - 
