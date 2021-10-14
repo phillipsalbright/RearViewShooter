@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 50f;
+    public float maxHealth = 50f;
     public DeathScreen deathScreen;
     /** Set gun to this in editor */
     [SerializeField] private Gun gun;
@@ -30,6 +31,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.layer == 10)
         {
+            if (health >= maxHealth)
+            {
+                return;
+            }
             float newHealth = health + 10f;
             if (newHealth >= 50f)
             {
@@ -42,8 +47,12 @@ public class PlayerHealth : MonoBehaviour
         }
         if (other.gameObject.layer == 11)
         {
+            if (gun.ammoCount >= gun.maxAmmo)
+            {
+                return;
+            }
             int newAmmo = gun.ammoCount + 4;
-            if (gun.ammoCount > gun.maxAmmo)
+            if (newAmmo > gun.maxAmmo)
             {
                 gun.ammoCount = gun.maxAmmo;
             } else
