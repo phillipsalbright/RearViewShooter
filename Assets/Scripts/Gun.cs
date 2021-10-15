@@ -7,8 +7,8 @@ public class Gun : MonoBehaviour
     public float impactForce = 10f;
     public float fireRate = 3f;
 
-    public int maxAmmo = 20;
-    public int ammoCount = 20;
+    public int maxAmmo = 25;
+    public int ammoCount = 25;
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;

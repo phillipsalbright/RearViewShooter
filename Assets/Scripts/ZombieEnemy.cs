@@ -45,7 +45,7 @@ public class ZombieEnemy : MonoBehaviour
     {
         if (healthCounter.health <= 0)
         {
-
+            healthCounter.health = 10;
             nm.SetDestination(this.transform.position);
             aiState = AIState.dead;
             StartCoroutine(Death());
@@ -118,6 +118,8 @@ public class ZombieEnemy : MonoBehaviour
     IEnumerator Death()
     {
         anim.SetBool("Dead", true);
+        LevelScript levelScript = (LevelScript) GameObject.FindGameObjectWithTag("Level").GetComponent<LevelScript>();
+        levelScript.EnemyDied();
         /** Figure out way to make dead body not collide */
         /** Might be unnecessary now */
         this.gameObject.GetComponent<Rigidbody>().detectCollisions = false;

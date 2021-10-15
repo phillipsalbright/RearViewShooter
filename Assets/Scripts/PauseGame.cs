@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour
 {
     public bool Paused = false;
+
+    /** Set these gameObjects in the editor */
     public GameObject Player;
     public GameObject PauseMenu;
+    public Gun gun;
 
     void Update()
     {
@@ -13,6 +16,7 @@ public class PauseGame : MonoBehaviour
         {
             if (Paused == false)
             {
+                gun.enabled = false;
                 Time.timeScale = 0;
                 Paused = true;
                 PauseMenu.SetActive(true);
@@ -28,6 +32,7 @@ public class PauseGame : MonoBehaviour
 
     public void UnpauseGame()
     {
+        gun.enabled = true;
         Player.GetComponent<PlayerLook>().enabled = true;
         Paused = false;
         PauseMenu.SetActive(false);
@@ -45,5 +50,13 @@ public class PauseGame : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

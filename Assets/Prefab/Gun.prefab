@@ -5225,8 +5225,8 @@ MonoBehaviour:
   range: 100
   impactForce: 3000
   fireRate: 3
-  maxAmmo: 20
-  ammoCount: 20
+  maxAmmo: 25
+  ammoCount: 25
   fpsCam: {fileID: 0}
   muzzleFlash: {fileID: 8999677636239608429}
   impactEffect: {fileID: 8034785520265548636, guid: 34a80ab69017ffd41a30caac79fe2bba, type: 3}
