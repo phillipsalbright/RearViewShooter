@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * This script is attached to an empty object with a Panel as a child and manages that Panel
+ * to act as the introductory message that appears when the tutorial is started. Also manages
+ * some logic specific to the tutorial level.
+ */
 public class IntroLevelScript : MonoBehaviour
 {
+    /** Introductory text set in the prefab. */
     public GameObject introText;
+    /** Set this to the "Player" child of the "PlayerWhole" prefab within the scene */
     public GameObject player;
 
     void Start()
