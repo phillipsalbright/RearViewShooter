@@ -14,6 +14,10 @@ public class IntroLevelScript : MonoBehaviour
     public GameObject introText;
     /** Set this to the "Player" child of the "PlayerWhole" prefab within the scene */
     public GameObject player;
+    /** Set this to the "Gun" child of the "PlayerWhole" prefab within the scene */
+    public GameObject gun;
+    /** Prop gun in the scene of the tutorial, destroyed when player "obtains the gun". Set within the prefab. */
+    public GameObject propGun;
 
     void Start()
     {
@@ -37,5 +41,14 @@ public class IntroLevelScript : MonoBehaviour
         player.GetComponent<PlayerLook>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 7)
+        {
+            Destroy(propGun);
+            gun.SetActive(true);
+        }
     }
 }
