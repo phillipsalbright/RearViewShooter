@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: dfccde03f73a26e4996bfa0d6fe78305, type: 2}
+--- !u!114 &87443356 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9054506018935608321, guid: 883e9869a582058438c2754227e468e5, type: 3}
+  m_PrefabInstance: {fileID: 3008297845796402208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96132a18b1e411459884642b1b53a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &223412786
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelScriptHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 87443356}
     - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: numberOfEnemies
       value: 10

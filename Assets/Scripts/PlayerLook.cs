@@ -16,10 +16,11 @@ public class PlayerLook : MonoBehaviour
     private float mouseY;
 
     public float multiplier = .01f;
-    
-    private float xRotation;
 
-    private float yRotation;
+
+    /** Set these for initial rotation values in editor */
+    public float xRotation;
+    public float yRotation;
 
     /** Orientation of the player in the scene, gameobject attached to player keeping track of this */
     /** If player hitbox is not symmetrical on x/z plane, would have to change to rotate whole player */

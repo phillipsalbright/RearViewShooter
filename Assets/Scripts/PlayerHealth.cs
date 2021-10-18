@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
  */
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 50f;
+    public float health;
     public float maxHealth = 50f;
     public DeathScreen deathScreen;
     /** Set gun to this in editor */

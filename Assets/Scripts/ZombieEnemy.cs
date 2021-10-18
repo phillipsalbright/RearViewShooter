@@ -29,7 +29,7 @@ public class ZombieEnemy : MonoBehaviour
     void Start()
     {
         nm.SetDestination(this.transform.position);
-        range = 12f;
+        range = 25f;
         attackRange = 2f;
         while (target == null)
         {

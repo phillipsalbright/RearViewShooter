@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
     public float fireRate = 3f;
 
     public int maxAmmo = 25;
-    public int ammoCount = 25;
+    public int ammoCount;
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
@@ -19,7 +19,6 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        ammoCount = maxAmmo;
     }
     // Update is called once per frame
     void Update()
