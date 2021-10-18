@@ -988,9 +988,17 @@ PrefabInstance:
       value: LevelScriptHolder
       objectReference: {fileID: 0}
     - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1904087873}
+    - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1913646368}
+    - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 983376210}
     - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: numberOfEnemies
       value: 1

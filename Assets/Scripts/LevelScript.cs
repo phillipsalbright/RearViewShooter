@@ -8,6 +8,8 @@ public class LevelScript : MonoBehaviour
     public GameObject winScreen;
     public PlayerLook player;
     public int nextLevelSceneid;
+    public GameObject gun;
+    public GameObject pauseMenu;
 
     public void EnemyDied()
     {
@@ -18,6 +20,8 @@ public class LevelScript : MonoBehaviour
     IEnumerator EndLevel()
     {
         yield return new WaitForSeconds(2f);
+        gun.SetActive(false);
+        pauseMenu.SetActive(false);
         winScreen.SetActive(true);
         Time.timeScale = 0;
         player.GetComponent<PlayerLook>().enabled = false;

@@ -986,9 +986,17 @@ PrefabInstance:
       value: LevelScriptHolder
       objectReference: {fileID: 0}
     - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 3008297845796402209}
+    - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 87443356}
+    - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 3008297845796402210}
     - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: numberOfEnemies
       value: 10
@@ -1096,6 +1104,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883e9869a582058438c2754227e468e5, type: 3}
+--- !u!1 &3008297845796402209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4086430308392626339, guid: 883e9869a582058438c2754227e468e5, type: 3}
+  m_PrefabInstance: {fileID: 3008297845796402208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3008297845796402210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3008297845109016411, guid: 883e9869a582058438c2754227e468e5, type: 3}
+  m_PrefabInstance: {fileID: 3008297845796402208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3425949463716469523
 PrefabInstance:
   m_ObjectHideFlags: 0
