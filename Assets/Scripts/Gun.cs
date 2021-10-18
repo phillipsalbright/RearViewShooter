@@ -5,7 +5,7 @@ public class Gun : MonoBehaviour
     public float damage = 10f;
     public float range = 100f;
     public float impactForce = 10f;
-    public float fireRate = 3f;
+    public float fireRate = 1.6f;
 
     public int maxAmmo = 25;
     public int ammoCount;
@@ -17,9 +17,6 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     public AudioSource gunShotSound;
 
-    private void Start()
-    {
-    }
     // Update is called once per frame
     void Update()
     {

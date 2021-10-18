@@ -8,6 +8,8 @@ public class ZombieEnemy : MonoBehaviour
     public Transform target;
     public float range;
     public float attackRange;
+    /** Zombie will only start attacking if the player is in range, and it has seen the player at least once */
+    private bool hasSeenPlayer;
     //public float hitForce = 10f;
 
     /** Can change initial state in inspector */
@@ -63,8 +65,22 @@ public class ZombieEnemy : MonoBehaviour
                 case AIState.idle:
                     if (Vector3.Distance(target.position, this.transform.position) < range)
                     {
-                        aiState = AIState.chasing;
-                        anim.SetBool("Chasing", true);
+                        if (!hasSeenPlayer)
+                        {
+                            RaycastHit hit;
+                            if (Physics.Raycast(this.transform.position, target.position - this.transform.position, out hit, range))
+                            {
+                                GameObject player = hit.transform.gameObject;
+                                if (player != null && player.layer == 7)
+                                {
+                                    hasSeenPlayer = true;
+                                }
+                            }
+                        } else
+                        {
+                            aiState = AIState.chasing;
+                            anim.SetBool("Chasing", true);
+                        }
                     }
                     nm.SetDestination(this.transform.position);
                     headHitBox.transform.localPosition = new Vector3(0, 1.818f, .029f);

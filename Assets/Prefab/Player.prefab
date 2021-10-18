@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1df5069973c0e1458b9ef3534469da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 4
   movementMultiplier: 10
   airMultiplier: 0.2
   jumpForce: 14
@@ -194,6 +194,8 @@ MonoBehaviour:
   sensitivityY: 1
   mainCamera: {fileID: 0}
   multiplier: 1
+  xRotation: 0
+  yRotation: 0
   orientation: {fileID: 2697828512304354793}
 --- !u!114 &3005947591134991759
 MonoBehaviour:
@@ -208,6 +210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  maxHealth: 50
+  deathScreen: {fileID: 0}
+  gun: {fileID: 0}
 --- !u!1 &4652738898199089178
 GameObject:
   m_ObjectHideFlags: 0

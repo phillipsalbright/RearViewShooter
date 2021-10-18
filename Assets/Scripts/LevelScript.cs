@@ -14,7 +14,10 @@ public class LevelScript : MonoBehaviour
     public void EnemyDied()
     {
         numberOfEnemies--;
-        StartCoroutine(EndLevel());
+        if (numberOfEnemies <= 0)
+        {
+            StartCoroutine(EndLevel());
+        }
     }
 
     IEnumerator EndLevel()

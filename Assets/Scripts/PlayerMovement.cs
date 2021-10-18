@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         float angleMovement = Mathf.Abs(Vector3.Angle(moveDirection, orientation.forward));
         if (angleMovement > 90)
         {
-            moveSpeedLocal = .6f * moveSpeed;
+            moveSpeedLocal = .7f * moveSpeed;
         } else if (angleMovement >= 45)
         {
             moveSpeedLocal = .9f * moveSpeed;

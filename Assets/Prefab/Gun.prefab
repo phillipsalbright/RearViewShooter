@@ -5224,7 +5224,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   impactForce: 3000
-  fireRate: 3
+  fireRate: 1.6
   maxAmmo: 25
   ammoCount: 25
   fpsCam: {fileID: 0}
