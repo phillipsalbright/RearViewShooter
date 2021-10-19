@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Script for a target/sliding door combo that was originally only going to be in the tutorial,
+ * but has since been generalized.
+ */
 public class TutorialTargetScript : MonoBehaviour
 {
     /** Door to slide after target is hit */
-    public Transform slidingDoor2;
+    public Transform slidingDoor;
+    public float zpos;
 
     void Update()
     {
@@ -14,18 +19,18 @@ public class TutorialTargetScript : MonoBehaviour
         {
             if (t.gameObject.layer == 12)
             {
-                StartCoroutine(MoveSlidingDoor2());
+                StartCoroutine(MoveSlidingDoor());
                 this.enabled = false;
             }
         }
     }
 
-    private IEnumerator MoveSlidingDoor2()
+    private IEnumerator MoveSlidingDoor()
     {
-        while (slidingDoor2.localPosition.z > -17f)
+        while (slidingDoor.localPosition.z > zpos)
         {
-            slidingDoor2.localPosition = new Vector3(slidingDoor2.localPosition.x, slidingDoor2.localPosition.y, slidingDoor2.localPosition.z - .01f);
-            yield return new WaitForSeconds(.005f);
+            slidingDoor.localPosition = new Vector3(slidingDoor.localPosition.x, slidingDoor.localPosition.y, slidingDoor.localPosition.z - .01f);
+            yield return new WaitForSeconds(.0002f);
         }
     }
 }

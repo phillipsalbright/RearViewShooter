@@ -10,19 +10,16 @@ public class LevelScript : MonoBehaviour
     public int nextLevelSceneid;
     public GameObject gun;
     public GameObject pauseMenu;
+    private bool levelOver = false;
 
     public void EnemyDied()
     {
         numberOfEnemies--;
-        if (numberOfEnemies <= 0)
-        {
-            StartCoroutine(EndLevel());
-        }
     }
 
     IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         gun.SetActive(false);
         pauseMenu.SetActive(false);
         winScreen.SetActive(true);
@@ -50,5 +47,17 @@ public class LevelScript : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(nextLevelSceneid);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 7)
+        {
+            if (numberOfEnemies <= 0 && !levelOver)
+            {
+                StartCoroutine(EndLevel());
+                levelOver = true;
+            }
+        }
     }
 }

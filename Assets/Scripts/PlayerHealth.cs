@@ -12,7 +12,13 @@ public class PlayerHealth : MonoBehaviour
     public DeathScreen deathScreen;
     /** Set gun to this in editor */
     [SerializeField] private Gun gun;
+    private float nextAcidDamage = 0;
     
+    void Start()
+    {
+        nextAcidDamage = Time.time;
+    }
+
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -51,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
-            int newAmmo = gun.ammoCount + 5;
+            int newAmmo = gun.ammoCount + 6;
             if (newAmmo > gun.maxAmmo)
             {
                 gun.ammoCount = gun.maxAmmo;
@@ -60,6 +66,14 @@ public class PlayerHealth : MonoBehaviour
                 gun.ammoCount = newAmmo;
             }
             Destroy(other.gameObject);
+        }
+        if (other.gameObject.layer == 13)
+        {
+            if (Time.time >= nextAcidDamage)
+            {
+                TakeDamage(3f);
+                nextAcidDamage = Time.time + 2f;
+            }
         }
     }
 }

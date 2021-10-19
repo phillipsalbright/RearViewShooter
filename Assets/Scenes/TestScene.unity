@@ -999,7 +999,7 @@ PrefabInstance:
       objectReference: {fileID: 3008297845796402210}
     - target: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: numberOfEnemies
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8689639222874140123, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: m_RootOrder

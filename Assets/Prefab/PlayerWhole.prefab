@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8907051177191430822, guid: c77faef1126aebd4a900b3ae6fc03cd1, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 15615
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c77faef1126aebd4a900b3ae6fc03cd1, type: 3}
 --- !u!4 &8073794070299141897 stripped
@@ -193,6 +197,10 @@ PrefabInstance:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 4564817087283590108}
+    - target: {fileID: 5082612857937729843, guid: 5559a2ebe5966e1468fcbda639a462bc, type: 3}
+      propertyPath: yRotation
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 5082612857937729843, guid: 5559a2ebe5966e1468fcbda639a462bc, type: 3}
       propertyPath: mainCamera
       value: 
