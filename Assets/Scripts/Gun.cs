@@ -10,12 +10,25 @@ public class Gun : MonoBehaviour
     public int maxAmmo = 25;
     public int ammoCount;
 
+    /** Set this to the Camera within the scene or prefab */
     public Camera fpsCam;
+    private Animator m_animator;
+    /** Position to fire raycast from, set in prefab. */
+    public GameObject firingPos;
+
+    /** Set these to other prefabs */
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    public GameObject bloodImpactEffect;
 
     private float nextTimeToFire = 0f;
     public AudioSource gunShotSound;
+
+    void Start()
+    {
+        m_animator = GetComponent<Animator>();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -32,24 +45,30 @@ public class Gun : MonoBehaviour
     {
         if (ammoCount > 0)
         {
+            m_animator.SetTrigger("Shoot");
             ammoCount--;
             muzzleFlash.Play();
             RaycastHit hit;
             gunShotSound.Play();
             //FindObjectOfType<AudioManager>().Play("Gunshot sound");
             //Change "this" to "fpsCam" for testing.
-            if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, range))
+            if (Physics.Raycast(firingPos.transform.position, firingPos.transform.forward, out hit, range))
             {
+                GameObject impact;
                 EnemyTarget target = hit.transform.GetComponent<EnemyTarget>();
                 if (target != null)
                 {
                     target.TakeDamage(damage);
+                    impact = Instantiate(bloodImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                } else
+                {
+                    impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 }
                 if (hit.rigidbody != null)
                 {
                     hit.rigidbody.AddForce(-hit.normal * impactForce);
                 }
-                GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+
                 impact.transform.SetParent(hit.transform);
                 Destroy(impact, 2f);
             }

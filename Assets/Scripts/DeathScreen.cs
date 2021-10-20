@@ -3,8 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour
 {
+    /** All set within prefab */
     public GameObject deathScreen;
     public GameObject Player;
+    public GameObject pauseMenu;
     public int currentLevel;
 
     private void Start()
@@ -14,6 +16,7 @@ public class DeathScreen : MonoBehaviour
     public void Death()
     {
         Time.timeScale = 0;
+        pauseMenu.SetActive(false);
         deathScreen.SetActive(true);
         Player.GetComponent<PlayerLook>().enabled = false;
         Cursor.visible = true;

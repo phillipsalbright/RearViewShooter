@@ -975,6 +975,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 556713813646281004, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+      propertyPath: m_Text
+      value: You have completed the tutorial!
+      objectReference: {fileID: 0}
     - target: {fileID: 2100860959641192763, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
       propertyPath: m_Name
       value: LevelScriptHolder
@@ -2805,6 +2809,7 @@ Transform:
   - {fileID: 656790448}
   - {fileID: 1787762820}
   - {fileID: 1027152412}
+  - {fileID: 2139436025}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3755,6 +3760,116 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086692461}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2139436024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1647717920}
+    m_Modifications:
+    - target: {fileID: 4675893937372218821, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675893937372218821, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.10000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965714653362333196, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965714653362333196, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714839076598319379, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_Name
+      value: ZombieSign (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714839076598319379, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714839076598319379, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_text
+      value: Hit zombies in the head or torso using your weapon to kill them
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_margin.x
+      value: -3.5300837
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_margin.z
+      value: -4.9584627
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+--- !u!4 &2139436025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
+  m_PrefabInstance: {fileID: 2139436024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &411291032451987327
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: e648f859e06745a438c7546c9e2cb8d1
   - enabled: 1
-    path: Assets/Scenes/TwinReactors.unity
-    guid: 4a066a79a045b3746a76cd73e6885a18
-  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 5c3a71ff14b5e8244ba30f0c03319694
+  - enabled: 1
+    path: Assets/Scenes/TwinReactors.unity
+    guid: 4a066a79a045b3746a76cd73e6885a18
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

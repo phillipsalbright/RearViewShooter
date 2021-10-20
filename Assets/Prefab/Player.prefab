@@ -195,7 +195,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   multiplier: 1
   xRotation: 0
-  yRotation: 0
+  yRotation: 180
   orientation: {fileID: 2697828512304354793}
 --- !u!114 &3005947591134991759
 MonoBehaviour:
@@ -212,6 +212,7 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   deathScreen: {fileID: 0}
+  hurtImage: {fileID: 0}
   gun: {fileID: 0}
 --- !u!1 &4652738898199089178
 GameObject:
