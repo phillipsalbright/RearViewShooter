@@ -29,8 +29,8 @@ public class TutorialTargetScript : MonoBehaviour
     {
         while (slidingDoor.localPosition.z > zpos)
         {
-            slidingDoor.localPosition = new Vector3(slidingDoor.localPosition.x, slidingDoor.localPosition.y, slidingDoor.localPosition.z - .01f);
-            yield return new WaitForSeconds(.0002f);
+            slidingDoor.localPosition = new Vector3(slidingDoor.localPosition.x, slidingDoor.localPosition.y, slidingDoor.localPosition.z - .03f);
+            yield return new WaitForSeconds(.0001f);
         }
     }
 }

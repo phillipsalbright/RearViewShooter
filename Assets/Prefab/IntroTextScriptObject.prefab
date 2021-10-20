@@ -234,10 +234,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -282,8 +282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -138}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4746388013776531089
 CanvasRenderer:
@@ -413,8 +413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 0, y: -189}
+  m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4746388014276973386
 CanvasRenderer:
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -446,10 +446,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome to Rear View Shooter. This is a game about using an unconventional
+  m_Text: Welcome to Rear-View Shooter. This is a game about using an unconventional
     weapon to kill zombies. Take your first right to obtain your weapon.
 --- !u!1 &4746388014383119787
 GameObject:
@@ -511,6 +511,9 @@ MonoBehaviour:
   gun: {fileID: 0}
   propGun: {fileID: 4622559704696846368}
   pauseMenu: {fileID: 0}
+  playerUI: {fileID: 0}
+  sign1: {fileID: 0}
+  slidingDoor1: {fileID: 0}
 --- !u!65 &2031113198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -541,7 +544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4746388014451685254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -627,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 789339763233636289, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6498996749903133473, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_Enabled
@@ -655,6 +658,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8866589092682958144, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889281383846468009, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8999677635995365689, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
@@ -703,15 +710,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8999677637148271279, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.048662
+      value: 3.548662
       objectReference: {fileID: 0}
     - target: {fileID: 8999677637148271279, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.97572
+      value: 13.05
       objectReference: {fileID: 0}
     - target: {fileID: 8999677637148271279, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 8999677637148271279, guid: b0c6e706cb7fe4042bc0329172bafca2, type: 3}
       propertyPath: m_LocalRotation.w

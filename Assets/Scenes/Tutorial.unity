@@ -3923,18 +3923,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4622559704696846369, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.548662
-      objectReference: {fileID: 0}
-    - target: {fileID: 4622559704696846369, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4622559704696846369, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -22.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4746388014383119784, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}
       propertyPath: gun
       value: 
@@ -4006,10 +3994,6 @@ PrefabInstance:
     - target: {fileID: 4746388014383119787, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}
       propertyPath: m_Name
       value: IntroTextScriptObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 5160831592774222631, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d233c0738c9b7f40a73551ced90c621, type: 3}

@@ -26,7 +26,11 @@ public class ZombieEnemy : MonoBehaviour
     /** Hitboxes for the zombie that we will manipulate the transform of to match animations */
     public GameObject headHitBox;
     public GameObject bodyHitBox;
-    
+
+    /** Audio clips attached to the zombie prefab to be played in game */
+    public AudioSource angerSound;
+    public AudioSource attackSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +83,7 @@ public class ZombieEnemy : MonoBehaviour
                         } else
                         {
                             aiState = AIState.chasing;
+                            angerSound.Play();
                             anim.SetBool("Chasing", true);
                         }
                     }
@@ -111,14 +116,17 @@ public class ZombieEnemy : MonoBehaviour
                     if (distance > attackRange)
                     {
                         aiState = AIState.chasing;
+                        angerSound.Play();
                         anim.SetBool("Attacking", false);
                     } else
                     {
+                        attackSound.Play();
                         target.GetComponent<PlayerHealth>().TakeDamage(5f);
                         /** maybe add force
                         Rigidbody r = target.GetComponent<Rigidbody>();
                         r.AddForce(-r.normal * hitForce);
                         */
+                        yield return new WaitForSeconds(.1f);
                     }
                     headHitBox.transform.localPosition = new Vector3(0, 1.818f, .029f);
                     bodyHitBox.transform.localPosition = new Vector3(0, 1.28f, -.049f);

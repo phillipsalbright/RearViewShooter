@@ -70,7 +70,7 @@ public class IntroLevelScript : MonoBehaviour
     {
         while (slidingDoor1.localPosition.z > -17.2f)
         {
-            slidingDoor1.localPosition = new Vector3(slidingDoor1.localPosition.x, slidingDoor1.localPosition.y, slidingDoor1.localPosition.z - .01f);
+            slidingDoor1.localPosition = new Vector3(slidingDoor1.localPosition.x, slidingDoor1.localPosition.y, slidingDoor1.localPosition.z - .03f);
             yield return new WaitForSeconds(.0001f);
         }
     }
@@ -82,8 +82,8 @@ public class IntroLevelScript : MonoBehaviour
     {
         while (sign1.localPosition.z > -3.18f)
         {
-            sign1.localPosition = new Vector3(sign1.localPosition.x, sign1.localPosition.y, sign1.localPosition.z - .01f);
-            yield return new WaitForSeconds(.05f);
+            sign1.localPosition = new Vector3(sign1.localPosition.x, sign1.localPosition.y, sign1.localPosition.z - .02f);
+            yield return new WaitForSeconds(.0001f);
         }
     }
 }
