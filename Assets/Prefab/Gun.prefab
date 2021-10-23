@@ -299,11 +299,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8723193466343388109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.704, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 2, z: 20}
   m_Children: []
-  m_Father: {fileID: 8999677637148271279}
+  m_Father: {fileID: 2177908699389731508}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8999677635995365689
@@ -5237,7 +5237,6 @@ Transform:
   - {fileID: 8999677636239608431}
   - {fileID: 2177908699389731508}
   - {fileID: 830588236523314994}
-  - {fileID: 7969537293821420322}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -5264,6 +5263,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 8999677636239608429}
   impactEffect: {fileID: 8034785520265548636, guid: 34a80ab69017ffd41a30caac79fe2bba, type: 3}
   bloodImpactEffect: {fileID: 695279198299505161, guid: 8b3654efbc402334c90506f1768e6009, type: 3}
+  easyModeCrosshair: {fileID: 861047904564839821}
   gunShotSound: {fileID: 8999677636873031681}
 --- !u!82 &8999677636873031681
 AudioSource:
@@ -5391,29 +5391,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
-    - target: {fileID: 2604202369338333337, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3604680295377235035, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934590058872070757, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4690204209130733421, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4690204209130733421, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4690204209130733421, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4690204209130733421, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5460,5 +5440,10 @@ PrefabInstance:
 --- !u!4 &2177908699389731508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4690204209130733421, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
+  m_PrefabInstance: {fileID: 6858858591871098329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &861047904564839821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6114904288963745876, guid: 7bfedf8bee818cb46a40c45d386d3eaf, type: 3}
   m_PrefabInstance: {fileID: 6858858591871098329}
   m_PrefabAsset: {fileID: 0}

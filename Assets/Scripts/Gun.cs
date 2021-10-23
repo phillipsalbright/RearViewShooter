@@ -22,11 +22,18 @@ public class Gun : MonoBehaviour
     public GameObject bloodImpactEffect;
 
     private float nextTimeToFire = 0f;
+
+    /** Crosshair to disable if in hard mode (determined by playerprefs). Set in prefab. */
+    [SerializeField] private GameObject easyModeCrosshair;
     public AudioSource gunShotSound;
 
     void Start()
     {
         m_animator = GetComponent<Animator>();
+        if (PlayerPrefs.GetInt("Difficulty", 0) != 0)
+        {
+            easyModeCrosshair.SetActive(false);
+        }
     }
 
 

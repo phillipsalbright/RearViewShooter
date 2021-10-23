@@ -3,10 +3,10 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     /** X axis sensitivity to be set in editor */
-    [SerializeField] private float sensitivityX;
+    private float sensitivityX;
 
     /** Y axis sensitivity to be set in editor */
-    [SerializeField] private float sensitivityY;
+    private float sensitivityY;
 
     /** Camera holder prefab within the scene */
     public Transform mainCamera;
@@ -15,7 +15,7 @@ public class PlayerLook : MonoBehaviour
 
     private float mouseY;
 
-    public float multiplier = .01f;
+    private float sensitivity;
 
 
     /** Set these for initial rotation values in editor */
@@ -30,6 +30,13 @@ public class PlayerLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        sensitivity = PlayerPrefs.GetFloat("Sensitivity", .5f) * 2f;
+        sensitivityX = 1;
+        sensitivityY = 1;
+        if (sensitivity <= 0)
+        {
+            sensitivity = 1;
+        }
     }
 
     void Update()
@@ -43,8 +50,8 @@ public class PlayerLook : MonoBehaviour
     {
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
-        yRotation += mouseX * sensitivityX * multiplier;
-        xRotation -= mouseY * sensitivityY * multiplier;
+        yRotation += mouseX * sensitivityX * sensitivity;
+        xRotation -= mouseY * sensitivityY * sensitivity;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
     }
 }
