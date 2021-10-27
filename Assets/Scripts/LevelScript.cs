@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class LevelScript : MonoBehaviour
 {
@@ -11,6 +12,19 @@ public class LevelScript : MonoBehaviour
     public GameObject gun;
     public GameObject pauseMenu;
     private bool levelOver = false;
+    private float startTime;
+    private int thisSceneId;
+    /** Contains all the strings that correspond to playerprefs for the best time on each level */
+    private string[] levelHighScoreStrings = { "MainMenu", "Tutorial", "Level1", "Level2" };
+    [SerializeField] private Text yourScoreText;
+    [SerializeField] private Text highScoreText;
+
+
+    void Start()
+    {
+        startTime = Time.time;
+        thisSceneId = SceneManager.GetActiveScene().buildIndex;
+    }
 
     public void EnemyDied()
     {
@@ -34,7 +48,7 @@ public class LevelScript : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(thisSceneId);
     }
 
     public void MainMenu()
@@ -55,6 +69,16 @@ public class LevelScript : MonoBehaviour
         {
             if (numberOfEnemies <= 0 && !levelOver)
             {
+                float endTime = Time.time;
+                float timeComplete = endTime - startTime;
+                float highScore = PlayerPrefs.GetFloat(levelHighScoreStrings[thisSceneId], -1f);
+                if (highScore < timeComplete)
+                {
+                    PlayerPrefs.SetFloat(levelHighScoreStrings[thisSceneId], timeComplete);
+                    highScore = timeComplete;
+                }
+                yourScoreText.text = "Your Score: " + timeComplete.ToString();
+                highScoreText.text = "High Score: " + highScore.ToString();
                 StartCoroutine(EndLevel());
                 levelOver = true;
             }
