@@ -72,13 +72,13 @@ public class LevelScript : MonoBehaviour
                 float endTime = Time.time;
                 float timeComplete = endTime - startTime;
                 float highScore = PlayerPrefs.GetFloat(levelHighScoreStrings[thisSceneId], -1f);
-                if (highScore < timeComplete)
+                if (highScore < 0 || highScore > timeComplete)
                 {
                     PlayerPrefs.SetFloat(levelHighScoreStrings[thisSceneId], timeComplete);
                     highScore = timeComplete;
                 }
-                yourScoreText.text = "Your Score: " + timeComplete.ToString();
-                highScoreText.text = "High Score: " + highScore.ToString();
+                yourScoreText.text = "Your Time: " + timeComplete.ToString() + " seconds";
+                highScoreText.text = "Best Time: " + highScore.ToString() + " seconds";
                 StartCoroutine(EndLevel());
                 levelOver = true;
             }

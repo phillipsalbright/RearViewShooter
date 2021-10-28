@@ -15,14 +15,14 @@ public class HighScoreMenu : MonoBehaviour
         float level2Time = PlayerPrefs.GetFloat(levelHighScoreStrings[3], -1f);
         if (tutorialTime > 0)
         {
-            times.text = "Tutorial: " + tutorialTime + "\n";
+            times.text = "Tutorial: " + tutorialTime + " seconds\n";
         } else
         {
             times.text = "Tutorial: Not yet completed\n";
         }
         if (level1Time > 0)
         {
-            times.text += "Level 1: " + level1Time + "\n";
+            times.text += "Level 1: " + level1Time + " seconds\n";
         }
         else
         {
@@ -30,7 +30,7 @@ public class HighScoreMenu : MonoBehaviour
         }
         if (level2Time > 0)
         {
-            times.text += "Level 2: " + level2Time + "\n";
+            times.text += "Level 2: " + level2Time + " seconds\n";
         }
         else
         {
