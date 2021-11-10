@@ -144,12 +144,10 @@ public class ZombieEnemy : MonoBehaviour
         anim.SetBool("Dead", true);
         LevelScript levelScript = (LevelScript) GameObject.FindGameObjectWithTag("Level").GetComponent<LevelScript>();
         levelScript.EnemyDied();
-        /** Figure out way to make dead body not collide */
-        /** Might be unnecessary now */
         this.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
         model.transform.SetParent(null);
-        nm.GetComponentInParent<Transform>().position += new Vector3(100, 100, 100);
-        yield return new WaitForSeconds(30f);
+        Destroy(nm);
+        yield return new WaitForSeconds(50f);
         Destroy(model);
         Destroy(this.gameObject);
     }

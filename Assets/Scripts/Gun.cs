@@ -6,8 +6,8 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float impactForce = 10f;
     public float fireRate = 1.6f;
-
-    public int maxAmmo = 25;
+    
+    public int maxAmmo = 50;
     public int ammoCount;
 
     /** Set this to the Camera within the scene or prefab */

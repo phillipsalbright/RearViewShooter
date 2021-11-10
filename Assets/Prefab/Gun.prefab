@@ -5256,7 +5256,7 @@ MonoBehaviour:
   range: 100
   impactForce: 3000
   fireRate: 1.6
-  maxAmmo: 25
+  maxAmmo: 50
   ammoCount: 25
   fpsCam: {fileID: 0}
   firingPos: {fileID: 8723193466343388109}
