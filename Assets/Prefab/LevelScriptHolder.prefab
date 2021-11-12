@@ -480,6 +480,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   yourScoreText: {fileID: 7868584999585147661}
   highScoreText: {fileID: 1258846890923005028}
+  finishLevelMat: {fileID: 2100000, guid: ca6055851280e11408dc8541d33ebee6, type: 2}
 --- !u!65 &5341119308007540776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -711,7 +712,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a0bb04608cbea034298af0eba878ce05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

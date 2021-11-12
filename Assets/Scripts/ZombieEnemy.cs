@@ -128,6 +128,8 @@ public class ZombieEnemy : MonoBehaviour
                         */
                         yield return new WaitForSeconds(.1f);
                     }
+                    //float attackRotation = Vector3.Angle(this.transform.forward, this.transform.position - target.transform.position);
+                    //this.transform.rotation = new Quaternion(0, attackRotation, 0, 0);
                     headHitBox.transform.localPosition = new Vector3(0, 1.818f, .029f);
                     bodyHitBox.transform.localPosition = new Vector3(0, 1.28f, -.049f);
                     bodyHitBox.transform.localRotation = new Quaternion(0, 0, 0, 0);

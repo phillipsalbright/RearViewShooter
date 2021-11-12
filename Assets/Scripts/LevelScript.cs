@@ -18,17 +18,24 @@ public class LevelScript : MonoBehaviour
     private string[] levelHighScoreStrings = { "MainMenu", "Tutorial", "Level1", "Level2" };
     [SerializeField] private Text yourScoreText;
     [SerializeField] private Text highScoreText;
+    [SerializeField] private Material finishLevelMat;
+    private MeshRenderer endPlatformMesh;
 
 
     void Start()
     {
         startTime = Time.time;
         thisSceneId = SceneManager.GetActiveScene().buildIndex;
+        endPlatformMesh = GetComponentInChildren<MeshRenderer>();
     }
 
     public void EnemyDied()
     {
         numberOfEnemies--;
+        if (numberOfEnemies <= 0)
+        {
+            endPlatformMesh.material = finishLevelMat;
+        }
     }
 
     IEnumerator EndLevel()

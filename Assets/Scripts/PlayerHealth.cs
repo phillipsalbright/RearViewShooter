@@ -68,7 +68,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
-            int newAmmo = gun.ammoCount + 5;
+            int newAmmo = gun.ammoCount + 6;
             if (newAmmo > gun.maxAmmo)
             {
                 gun.ammoCount = gun.maxAmmo;
