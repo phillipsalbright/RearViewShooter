@@ -816,6 +816,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366791201}
   m_Mesh: {fileID: 7059488439374195479, guid: c8616d99cca93a64595d3ec46375b9e8, type: 3}
+--- !u!114 &400306037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4809070951525611120, guid: c06d645e6c060864d8ec1f0685765d4b, type: 3}
+  m_PrefabInstance: {fileID: 568514818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55a21020c94ece4ba468bc3001dec5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &441007868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_LocalScale.z
@@ -1582,7 +1593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_LocalScale.z
@@ -1779,7 +1790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_LocalScale.z
@@ -2292,7 +2303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_text
-      value: On your screen you can see that you have a certain amount of health
+      value: On your screen you can see your current health and ammo counts
       objectReference: {fileID: 0}
     - target: {fileID: 9081896704098574470, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_fontSize
@@ -2933,7 +2944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_LocalScale.z
@@ -3323,6 +3334,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1230413422593702161, guid: 883e9869a582058438c2754227e468e5, type: 3}
+      propertyPath: levelScript
+      value: 
+      objectReference: {fileID: 400306037}
     - target: {fileID: 1339334213991127229, guid: 883e9869a582058438c2754227e468e5, type: 3}
       propertyPath: health
       value: 30
@@ -3517,7 +3532,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_LocalScale.z
@@ -3685,7 +3700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5014372836409609932, guid: 7efb66e83c93c3e4aa1a09a8cb8ced20, type: 3}
       propertyPath: m_LocalScale.z

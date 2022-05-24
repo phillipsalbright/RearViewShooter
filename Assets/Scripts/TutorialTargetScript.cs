@@ -11,6 +11,17 @@ public class TutorialTargetScript : MonoBehaviour
     /** Door to slide after target is hit */
     public Transform slidingDoor;
     public float zpos;
+    private int direction;
+
+    private void Start()
+    {
+        if (slidingDoor.localPosition.z > zpos)
+        {
+            direction = -1;
+        } else {
+            direction = 1;
+        }
+    }
 
     void Update()
     {
@@ -27,10 +38,20 @@ public class TutorialTargetScript : MonoBehaviour
 
     private IEnumerator MoveSlidingDoor()
     {
-        while (slidingDoor.localPosition.z > zpos)
+        if (direction > 0)
         {
-            slidingDoor.localPosition = new Vector3(slidingDoor.localPosition.x, slidingDoor.localPosition.y, slidingDoor.localPosition.z - .03f);
-            yield return new WaitForSeconds(.0001f);
+            while (slidingDoor.localPosition.z < zpos)
+            {
+                slidingDoor.localPosition = new Vector3(slidingDoor.localPosition.x, slidingDoor.localPosition.y, slidingDoor.localPosition.z + direction * .03f);
+                yield return new WaitForSeconds(.0001f);
+            }
+        } else
+        {
+            while (slidingDoor.localPosition.z > zpos)
+            {
+                slidingDoor.localPosition = new Vector3(slidingDoor.localPosition.x, slidingDoor.localPosition.y, slidingDoor.localPosition.z + direction * .03f);
+                yield return new WaitForSeconds(.0001f);
+            }
         }
     }
 }

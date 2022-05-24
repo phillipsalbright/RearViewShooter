@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 10)
+        if (other.gameObject.layer == 10 || other.gameObject.layer == 16)
         {
             if (health >= maxHealth)
             {
@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
-        if (other.gameObject.layer == 11)
+        if (other.gameObject.layer == 11 || other.gameObject.layer == 15)
         {
             if (gun.ammoCount >= gun.maxAmmo)
             {

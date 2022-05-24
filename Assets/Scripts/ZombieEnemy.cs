@@ -149,8 +149,9 @@ public class ZombieEnemy : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
         model.transform.SetParent(null);
         Destroy(nm);
-        yield return new WaitForSeconds(50f);
-        Destroy(model);
+        /** Originall intended to despawn zombies, this IEnumerator is pretty useless now, but I dont feel like refactoring code */
+        yield return new WaitForSeconds(1f);
+        model.transform.SetParent(null);
         Destroy(this.gameObject);
     }
 }

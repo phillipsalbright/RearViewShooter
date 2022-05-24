@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelScript : MonoBehaviour
 {
-    public int numberOfEnemies;
+    [SerializeField] private int numberOfEnemies;
     public GameObject winScreen;
     public PlayerLook player;
     public int nextLevelSceneid;
@@ -19,14 +19,15 @@ public class LevelScript : MonoBehaviour
     [SerializeField] private Text yourScoreText;
     [SerializeField] private Text highScoreText;
     [SerializeField] private Material finishLevelMat;
-    private MeshRenderer endPlatformMesh;
+    [SerializeField] private Material finishLevelMatBeacon;
+    [SerializeField] private MeshRenderer endPlatformMesh;
+    [SerializeField] private MeshRenderer endPlatformMeshBeacon;
 
 
     void Start()
     {
         startTime = Time.time;
         thisSceneId = SceneManager.GetActiveScene().buildIndex;
-        endPlatformMesh = GetComponentInChildren<MeshRenderer>();
     }
 
     public void EnemyDied()
@@ -35,6 +36,7 @@ public class LevelScript : MonoBehaviour
         if (numberOfEnemies <= 0)
         {
             endPlatformMesh.material = finishLevelMat;
+            endPlatformMeshBeacon.material = finishLevelMatBeacon;
         }
     }
 
@@ -90,5 +92,10 @@ public class LevelScript : MonoBehaviour
                 levelOver = true;
             }
         }
+    }
+
+    public int GetNumberOfEnemies()
+    {
+        return numberOfEnemies;
     }
 }
